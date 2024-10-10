@@ -1,0 +1,79 @@
+.top-main-img {
+  position: relative;
+}
+
+.top-main-content {
+  position: absolute;
+  top: 50%;
+  right: 20%;
+  font-weight: 800px;
+  font-size: 1rem;
+}
+
+.top-main-content .name {
+  font-size: 3rem;
+}
+
+.top-main-content .fa-graduation-cap {
+  color: #333;
+}
+
+.top-main-content {
+  opacity: 0;
+  transform: translateY(-50px);
+  animation: dropDown 3s ease forwards;
+}
+
+@keyframes dropDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px); /* Start above */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Move to its original position */
+  }
+}
+/* Responsive Design */
+/* Tablets and larger mobile devices */
+@media (max-width: 768px) {
+  .top-main-content h1 {
+    font-size: 2em;
+  }
+  .top-main-content .name {
+    font-size: 1.7em;
+  }
+  .top-main-content p {
+    font-size: 1.1em;
+  }
+}
+/* Mobile devices */
+@media (max-width: 576px) {
+  .top-main-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 10rem;
+    text-align: right;
+    padding: 10px;
+  }
+  .top-main-content h1 {
+    font-size: 1.8em;
+  }
+  .top-main-content .name {
+    font-size: 1.5em;
+  }
+  .top-main-content p {
+    font-size: 0.7em;
+  }
+  .navbar-nav {
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: row;
+  }
+  .navbar ul li {
+    margin: 0;
+  }
+}
+/* End of main section */
+

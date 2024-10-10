@@ -1,0 +1,7 @@
+/* shared-styles.css */
+@import '../mainproject/navbar/navbar.component.css';
+@import '../mainproject/main/main.component.css';
+@import '../mainproject/about/about.component.css';
+@import '../mainproject/blog/blog.component.css';
+@import '../mainproject/portfolio/portfolio.component.css';
+@import '../mainproject/contact/contact.component.css';

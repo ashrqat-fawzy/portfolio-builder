@@ -1,0 +1,488 @@
+<div class="container form-body mt-5 " >
+  <h1 class="text-center">About You</h1>
+  <form id="portfolioForm" [formGroup]="contactForm" (ngSubmit)="handleSubmitForm()" method="post">
+
+    <!-- Name Input -->
+    <div class="form-group mb-3">
+      <label for="username">Your Name</label>
+      <input type="text" class="form-control" id="username" placeholder="Enter your name" formControlName="username">
+      <span *ngIf="contactForm.controls['username'].touched && contactForm.controls['username'].errors?.['required']" class="text-danger">
+        Username is required...
+    </span>
+    </div>
+
+    <!-- Email Input -->
+    <div class="form-group mb-3">
+      <label for="userEmail">Email address</label>
+      <input type="email" class="form-control" id="userEmail" placeholder="Enter email" formControlName="email">
+
+    <span *ngIf="contactForm.controls['email'].touched && contactForm.controls['email'].errors?.['required']" class="text-danger">
+      Email is required...
+  </span>
+
+
+
+    </div>
+
+    <!-- Phone Input -->
+    <div class="form-group mb-3">
+      <label for="userPhone">Phone</label>
+      <input type="text" class="form-control" id="userPhone" placeholder="Enter Phone" formControlName="phone">
+      <span *ngIf="contactForm.controls['phone'].touched && contactForm.controls['phone'].errors?.['required']" class="text-danger">
+        Phone is required...
+    </span>
+    </div>
+
+    <!-- Education Input -->
+    <div class="form-group mb-3">
+      <label for="userEducation">Education</label>
+      <input type="text" class="form-control" placeholder="Enter Education" formControlName="education">
+      <span *ngIf="contactForm.controls['education'].touched && contactForm.controls['education'].errors?.['required']" class="text-danger">
+        Education is required...
+    </span>
+    </div>
+
+
+<!-- Image Upload Input -->
+<div class="form-group mb-3">
+  <label for="imageUpload">Upload Your Image or PDF</label>
+  <input
+    type="file"
+    class="form-control"
+    id="imageUpload"
+    (change)="onImageUpload($event)"
+    formControlName="img"
+    accept=".jpg, .jpeg, .png, .pdf"
+  >
+  <span *ngIf="contactForm.controls['img'].touched && contactForm.controls['img'].errors?.['required']" class="text-danger">
+    Image is required...
+</span>
+</div>
+
+
+
+    <!-- CV Upload -->
+    <div class="form-group mb-3">
+      <label for="cvUpload">Upload Your Resume (GoogleDrive Link)</label>
+      <input type="text" class="form-control" formControlName="resume" placeholder="Upload GoogleDrive Link">
+    </div>
+
+     <!-- About You Section -->
+     <h3>About Your Work Skills</h3>
+     <div class="aboutUser">
+      <div class="WorkSkills">
+        <div class="form-group mb-3">
+          <label for="workSkills">About Your First Skill</label>
+          <input type="text" class="form-control mb-2" placeholder="Enter ur skill title" formControlName="titleWorkSkill1">
+          <input type="text" class="form-control" placeholder="Enter ur skill description" formControlName="descriptionWorkSkill1">
+        </div>
+
+        <div class="form-group mb-3">
+          <label for="workSkills">About Your Second Skill</label>
+          <input type="text" class="form-control mb-2" placeholder="Enter ur skill title" formControlName="titleWorkSkill2">
+          <input type="text" class="form-control" placeholder="Enter ur skill description" formControlName="descriptionWorkSkill2">
+        </div>
+
+        <div class="form-group mb-3">
+          <label for="workSkills">About Your Third Skill</label>
+          <input type="text" class="form-control mb-2" placeholder="Enter ur skill title" formControlName="titleWorkSkill3">
+          <input type="text" class="form-control" placeholder="Enter ur skill description" formControlName="descriptionWorkSkill3">
+        </div>
+
+        <div class="form-group mb-3">
+          <label for="workSkills">About Your Fourth Skill</label>
+          <input type="text" class="form-control mb-2" placeholder="Enter ur skill title" formControlName="titleWorkSkill4">
+          <input type="text" class="form-control" placeholder="Enter ur skill description" formControlName="descriptionWorkSkill4">
+        </div>
+
+
+      </div>
+
+      <div class="trackSkills">
+        <div class="form-group mb-3">
+          <label for="trackSkills">Enter Your Track Skills</label>
+          <input type="text" class="form-control mb-2" placeholder="ur skill" formControlName="trackSkill1">
+          <input type="text" class="form-control mb-2" placeholder="ur skill" formControlName="trackSkill2">
+          <input type="text" class="form-control mb-2" placeholder="ur skill" formControlName="trackSkill3">
+          <input type="text" class="form-control mb-2" placeholder="ur skill" formControlName="trackSkill4">
+        </div>
+      </div>
+
+
+      <div class="form-group mb-3">
+        <label for="aboutText">Info About You</label>
+        <textarea class="form-control" id="aboutText" rows="4" placeholder="Tell us about yourself..." formControlName="notes" required></textarea>
+      </div>
+    </div>
+
+       <!-- Project Upload Input -->
+       <h3>About Your Projects</h3>
+       <div class="projects">
+       <div class="form-group mb-3 project1">
+        <label for="projectUpload">Upload Your Project Image</label>
+
+        <input
+        type="file"
+        class="form-control"
+        id="imageUpload"
+        (change)="onImageUploadProject1($event)"
+        formControlName="projectImg1"
+        accept=".jpg, .jpeg, .png, .pdf"
+      >
+      <span *ngIf="contactForm.controls['projectImg1'].touched && contactForm.controls['projectImg1'].errors?.['required']" class="text-danger">
+        Project image is required...
+    </span>
+
+
+        <label for="projectDes" class="mt-3">Project Title</label>
+        <input type="text" class="form-control mb-3" placeholder="Enter ur title" formControlName="projectTitle1">
+
+        <label for="projectDes">Tools</label>
+        <input type="text" class="form-control mb-3" formControlName="projectTool1">
+      </div>
+
+      <div class="form-group mb-3 project2">
+        <label for="projectUpload">Upload Your Project Image</label>
+        <input
+        type="file"
+        class="form-control"
+        id="imageUpload"
+        (change)="onImageUploadProject2($event)"
+        formControlName="projectImg2"
+        accept=".jpg, .jpeg, .png, .pdf"
+      >
+      <span *ngIf="contactForm.controls['projectImg2'].touched && contactForm.controls['projectImg2'].errors?.['required']" class="text-danger">
+        Project image is required...
+    </span>
+
+        <label for="projectDes" class="mt-3">Project Title</label>
+        <input type="text" class="form-control mb-3" placeholder="Enter ur title" formControlName="projectTitle2">
+
+        <label for="projectDes">Tools</label>
+        <input type="text" class="form-control mb-3" formControlName="projectTool2">
+      </div>
+
+
+      <div class="form-group mb-3 project3">
+        <label for="projectUpload">Upload Your Project Image</label>
+        <input
+        type="file"
+        class="form-control"
+        id="imageUpload"
+        (change)="onImageUploadProject3($event)"
+        formControlName="projectImg3"
+        accept=".jpg, .jpeg, .png, .pdf"
+      >
+      <span *ngIf="contactForm.controls['projectImg3'].touched && contactForm.controls['projectImg3'].errors?.['required']" class="text-danger">
+        Project image is required...
+    </span>
+
+        <label for="projectDes" class="mt-3">Project Title</label>
+        <input type="text" class="form-control mb-3" placeholder="Enter ur title" formControlName="projectTitle3">
+
+        <label for="projectDes">Tools</label>
+        <input type="text" class="form-control mb-3" formControlName="projectTool3">
+      </div>
+
+      <div class="form-group mb-3 project4">
+        <label for="projectUpload">Upload Your Project Image</label>
+        <input
+        type="file"
+        class="form-control"
+        id="imageUpload"
+        (change)="onImageUploadProject4($event)"
+        formControlName="projectImg4"
+        accept=".jpg, .jpeg, .png, .pdf"
+      >
+      <span *ngIf="contactForm.controls['projectImg4'].touched && contactForm.controls['projectImg4'].errors?.['required']" class="text-danger">
+        Project image is required...
+    </span>
+
+        <label for="projectDes" class="mt-3">Project Title</label>
+        <input type="text" class="form-control mb-3" placeholder="Enter ur title" formControlName="projectTitle4">
+
+        <label for="projectDes">Tools</label>
+        <input type="text" class="form-control mb-3"  formControlName="projectTool4">
+      </div>
+
+      <div class="form-group mb-3 project5">
+        <label for="projectUpload">Upload Your Project Image</label>
+        <input
+    type="file"
+    class="form-control"
+    id="imageUpload"
+    (change)="onImageUploadProject5($event)"
+    formControlName="projectImg5"
+    accept=".jpg, .jpeg, .png, .pdf"
+  >
+  <span *ngIf="contactForm.controls['projectImg5'].touched && contactForm.controls['projectImg5'].errors?.['required']" class="text-danger">
+    Project image is required...
+</span>
+
+        <label for="projectDes" class="mt-3">Project Title</label>
+        <input type="text" class="form-control mb-3" placeholder="Enter ur title" formControlName="projectTitle5">
+
+        <label for="projectDes">Tools</label>
+        <input type="text" class="form-control mb-3"  formControlName="projectTool5">
+      </div>
+
+      <div class="form-group mb-3 project6">
+        <label for="projectUpload">Upload Your Project Image</label>
+        <input
+        type="file"
+        class="form-control"
+        id="imageUpload"
+        (change)="onImageUploadProject6($event)"
+        formControlName="projectImg6"
+        accept=".jpg, .jpeg, .png, .pdf"
+      >
+      <span *ngIf="contactForm.controls['projectImg6'].touched && contactForm.controls['projectImg6'].errors?.['required']" class="text-danger">
+        Project image is required...
+    </span>
+
+        <label for="projectDes" class="mt-3">Project Title</label>
+        <input type="text" class="form-control mb-3" placeholder="Enter ur title" formControlName="projectTitle6">
+
+        <label for="projectDes">Tools</label>
+        <input type="text" class="form-control mb-3"  formControlName="projectTool6">
+      </div>
+
+
+      <div class="form-group mb-3 project7">
+        <label for="projectUpload">Upload Your Project Image</label>
+        <input
+        type="file"
+        class="form-control"
+        id="imageUpload"
+        (change)="onImageUploadProject7($event)"
+        formControlName="projectImg7"
+        accept=".jpg, .jpeg, .png, .pdf"
+      >
+      <span *ngIf="contactForm.controls['projectImg7'].touched && contactForm.controls['projectImg7'].errors?.['required']" class="text-danger">
+        Project image is required...
+    </span>
+
+        <label for="projectDes" class="mt-3">Project Title</label>
+        <input type="text" class="form-control mb-3" placeholder="Enter ur title" formControlName="projectTitle7">
+
+        <label for="projectDes">Tools</label>
+        <input type="text" class="form-control mb-3"  formControlName="projectTool7">
+      </div>
+
+      <div class="form-group mb-3 project8">
+        <label for="projectUpload">Upload Your Project Image</label>
+        <input
+        type="file"
+        class="form-control"
+        id="imageUpload"
+        (change)="onImageUploadProject8($event)"
+        formControlName="projectImg8"
+        accept=".jpg, .jpeg, .png, .pdf"
+      >  <span *ngIf="contactForm.controls['projectImg8'].touched && contactForm.controls['projectImg8'].errors?.['required']" class="text-danger">
+        Project image is required...
+    </span>
+
+        <label for="projectDes" class="mt-3">Project Title</label>
+        <input type="text" class="form-control mb-3" placeholder="Enter ur title" formControlName="projectTitle8">
+
+        <label for="projectDes">Tools</label>
+        <input type="text" class="form-control"  formControlName="projectTool8">
+      </div>
+    </div>
+
+    <!-- Blogs Upload -->
+    <h3>Blogs Upload</h3>
+    <div class="blog-upload-section">
+      <div class="fblog ">
+
+        <div class="form-group mb-3">
+          <label for="blog1">Upload Your First Blog Link</label>
+          <input type="text" class="form-control" formControlName="blog1">
+        </div>
+        <!-- Image Upload Input and blogs-->
+<div class="form-group mb-3">
+  <label for="imageUpload">Upload Your Image For First Blog</label>
+  <input
+    type="file"
+    class="form-control"
+    id="imageUpload"
+    (change)="onBlog1Upload($event)"
+    formControlName="blog1img"
+    accept=".jpg, .jpeg, .png, .pdf"
+  >
+  <span *ngIf="contactForm.controls['blog1img'].touched && contactForm.controls['blog1img'].errors?.['required']" class="text-danger">
+    Blog image is required...
+</span>
+</div>
+<div class="form-group mb-3">
+  <div class="form-group mb-3">
+    <label for="blogTitle">Enter Ur Blog Title</label>
+    <input type="text" class="form-control" formControlName="blog1title">
+  </div>
+
+  <div class="form-group mb-3">
+    <label for="blogDes">Enter Ur Blog Description</label>
+    <input type="text" class="form-control"  formControlName="blog1description">
+  </div>
+
+  <div class="form-group mb-3">
+    <label for="blogDate">Enter Ur Blog Date</label>
+    <input type="text" class="form-control"  formControlName="blog1date">
+  </div>
+</div>
+      </div >
+
+      <div class="sblog">
+        <div class="form-group mb-3">
+          <label for="blog2">Upload Your Second Blog Link</label>
+          <input type="text" class="form-control" formControlName="blog2">
+        </div>
+        <div class="form-group mb-3">
+          <label for="imageUpload">Upload Your Image For Second Blog</label>
+          <input
+            type="file"
+            class="form-control"
+            id="imageUpload"
+            (change)="onBlog2Upload($event)"
+            formControlName="blog2img"
+            accept=".jpg, .jpeg, .png, .pdf"
+          >
+          <span *ngIf="contactForm.controls['blog2img'].touched && contactForm.controls['blog2img'].errors?.['required']" class="text-danger">
+            Blog image is required...
+        </span>
+        </div>
+
+
+
+          <div class="form-group mb-3">
+            <div class="form-group mb-3">
+              <label for="blogTitle">Enter Ur Blog Title</label>
+              <input type="text" class="form-control"  formControlName="blog2title">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="blogDes">Enter Ur Blog Description</label>
+              <input type="text" class="form-control"  formControlName="blog2description">
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="blogDate">Enter Ur Blog Date</label>
+              <input type="text" class="form-control"  formControlName="blog2date">
+            </div>
+          </div>
+
+      </div>
+
+      <div class="tblog">
+        <div class="form-group mb-3">
+          <label for="blog3">Upload Your Third Blog Link</label>
+          <input type="text" class="form-control" formControlName="blog3">
+        </div>
+
+        <div class="form-group mb-3">
+          <label for="imageUpload">Upload Your Image For Third Blog</label>
+          <input
+            type="file"
+            class="form-control"
+            id="imageUpload"
+            (change)="onBlog3Upload($event)"
+            formControlName="blog3img"
+            accept=".jpg, .jpeg, .png, .pdf"
+          >
+          <span *ngIf="contactForm.controls['blog3img'].touched && contactForm.controls['blog3img'].errors?.['required']" class="text-danger">
+            Blog image is required...
+        </span>
+        </div>
+
+        <div class="form-group mb-3">
+          <div class="form-group mb-3">
+            <label for="blogTitle">Enter Ur Blog Title</label>
+            <input type="text" class="form-control" formControlName="blog3title">
+          </div>
+
+          <div class="form-group mb-3">
+            <label for="blogDes">Enter Ur Blog Description</label>
+            <input type="text" class="form-control"  formControlName="blog3description">
+          </div>
+
+          <div class="form-group mb-3">
+            <label for="blogDate">Enter Ur Blog Date</label>
+            <input type="text" class="form-control"  formControlName="blog3date">
+          </div>
+        </div>
+
+      </div>
+
+      <div class="Fblog">
+        <div class="form-group mb-3">
+          <label for="blog4">Upload Your Fourth Blog Link</label>
+          <input type="text" class="form-control" formControlName="blog4">
+        </div>
+
+        <div class="form-group mb-3">
+          <label for="imageUpload">Upload Your Image For Forth Blog</label>
+          <input
+            type="file"
+            class="form-control"
+            id="imageUpload"
+            (change)="onBlog4Upload($event)"
+            formControlName="blog4img"
+            accept=".jpg, .jpeg, .png, .pdf"
+          >
+          <span *ngIf="contactForm.controls['blog4img'].touched && contactForm.controls['blog4img'].errors?.['required']" class="text-danger">
+            Blog image is required...
+        </span>
+        </div>
+
+        <div class="form-group mb-3">
+          <div class="form-group mb-3">
+            <label for="blogTitle">Enter Ur Blog Title</label>
+            <input type="text" class="form-control"  formControlName="blog4title">
+          </div>
+
+          <div class="form-group mb-3">
+            <label for="blogDes">Enter Ur Blog Description</label>
+            <input type="text" class="form-control"  formControlName="blog4description">
+          </div>
+
+          <div class="form-group mb-3">
+            <label for="blogDate">Enter Ur Blog Date</label>
+            <input type="text" class="form-control" formControlName="blog4date">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- for contact Section -->
+    <h3>Social Accounts</h3>
+    <div class="social-section">
+    <!-- LinkedIn Upload -->
+    <div class="form-group mb-3">
+      <label for="linkedin">LinkedIn Profile</label>
+      <input type="text" class="form-control" formControlName="linkedin">
+    </div>
+
+    <!-- GitHub Upload -->
+    <div class="form-group mb-3">
+      <label for="github">GitHub Profile</label>
+      <input type="text" class="form-control" formControlName="github">
+    </div>
+
+    <!-- Facebook Upload -->
+    <div class="form-group mb-3">
+      <label for="facebook">Facebook Profile</label>
+      <input type="text" class="form-control" formControlName="facebook">
+    </div>
+
+    <!-- Instagram Upload -->
+    <div class="form-group mb-3">
+      <label for="instagram">Instagram Profile</label>
+      <input type="text" class="form-control" formControlName="instagram">
+    </div>
+    </div>
+    <!-- Submit Button -->
+    <button type="submit" class="btn btn-primary" [ngClass]="{'btn-change': isClicked}" (click)="onButtonClick()">Generate Portfolio</button>
+
+  </form>
+</div>

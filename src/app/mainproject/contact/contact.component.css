@@ -1,0 +1,123 @@
+.body {
+  background-color: #222;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.contact {
+  margin-top: 3rem;
+}
+
+.contact h5 {
+  color: #fff;
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
+}
+.contact h3 {
+  color: #fff;
+  margin-bottom: 3rem;
+  font-size: 2rem;
+  margin-top: 5rem;
+}
+.contact #right-header {
+  margin-left: 5rem;
+  margin-top: 5rem;
+}
+
+.dark-form .form-control {
+  background-color: #333;
+  border: none;
+  color: #fff;
+  padding: 10px;
+}
+
+.dark-form .form-control::placeholder {
+  color: #8b8b8b;
+}
+
+.dark-form .form-control:focus {
+  background-color: #404040;
+  color: #fff;
+  outline: none;
+  box-shadow: none;
+}
+
+.dark-form textarea.form-control {
+  min-height: 17rem;
+}
+
+.dark-form button.btn {
+  background-color: #bac964;
+  color: #fff;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  font-size: 0.8rem;
+  border-color: #bac964;
+}
+
+.dark-form button.btn:hover {
+  background-color: #bac964;
+}
+
+.contact .contact-details {
+  margin-left: 5rem;
+}
+.contact .right-text p strong {
+  color: #2c3e50;
+  letter-spacing: 0.1em;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-bottom: 5px;
+  display: block;
+}
+.contact .right-text .normal {
+  color: #8b8b8b;
+}
+.contact .right-text a {
+  text-decoration: none;
+  color: #8b8b8b !important;
+}
+
+footer .copy {
+  color: #8b8b8b;
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-top: 8rem;
+}
+footer .footer-icons {
+  justify-content: center;
+}
+footer .footer-icons i {
+  margin-left: 2rem;
+  color: #bac964;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background-color: #333;
+  border-radius: 4rem;
+}
+
+/* style for link transfer */
+.btn-link {
+  display: inline-block;
+  background-color: #bac964;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  margin-bottom: 5rem;
+}
+
+.btn-link:hover {
+  background-color: #a9b854;
+  color: #fff; 
+}
