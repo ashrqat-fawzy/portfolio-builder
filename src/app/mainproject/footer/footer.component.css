@@ -1,0 +1,46 @@
+.body {
+  background-color: #222;
+  width: 100%;
+  overflow: hidden;
+}
+footer{
+  margin-bottom: 5rem;
+}
+footer .copy {
+  color: #8b8b8b;
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-top: 8rem;
+}
+footer .footer-icons {
+  justify-content: center;
+}
+footer .footer-icons i {
+  margin-left: 2rem;
+  color: #bac964;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background-color: #333;
+  border-radius: 4rem;
+}
+
+/* style for link transfer */
+.btn-link {
+  display: inline-block;
+  background-color: #bac964;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  margin-left: 5rem;
+}
+
+.btn-link:hover {
+  background-color: #a9b854;
+  color: #fff;
+}

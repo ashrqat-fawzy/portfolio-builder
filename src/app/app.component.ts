@@ -8,14 +8,14 @@ import { PortfolioComponent } from './mainproject/portfolio/portfolio.component'
 import { BlogComponent } from './mainproject/blog/blog.component';
 import { ContactComponent } from './mainproject/contact/contact.component';
 import { Component, OnInit, Renderer2 } from '@angular/core';
-
+import { FooterComponent } from './mainproject/footer/footer.component';
 
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,NavbarComponent,MainComponent,AboutComponent,PortfolioComponent,BlogComponent,ContactComponent,FormComponent],
+  imports: [RouterOutlet,NavbarComponent,MainComponent,AboutComponent,PortfolioComponent,BlogComponent,ContactComponent,FormComponent,FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
