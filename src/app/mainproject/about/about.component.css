@@ -8,7 +8,12 @@
 .projects {
   text-align: center;
 }
+@media (max-width: 576px) {
+  #aboutMe{
+    margin-left: 2.5rem !important;
+  }
 
+  }
 /* about section */
 .icons-row {
   display: flex;
@@ -83,7 +88,7 @@
 
 #sec-about .btns a {
   text-decoration: none;
- 
+
 }
 
 #sec-about .btns button {

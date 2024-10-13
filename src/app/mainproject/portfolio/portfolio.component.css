@@ -40,6 +40,12 @@
 .project ul li a {
   color: #8b8b8b;
 }
+@media (max-width: 576px) {
+  .project ul li a {
+    font-size: 0.7rem !important;
+  }
+
+  }
 .project ul li a:hover {
   color: #bac964 !important;
 }
@@ -112,3 +118,11 @@
   background-color: #bac964;
   color: #fff;
 }
+
+
+@media (max-width: 576px) {
+  .project ul li a {
+    font-size: 0.7rem;
+  }
+
+  }

@@ -118,3 +118,48 @@
 }
 
 
+/* for mobile screens */
+@media (max-width: 576px) {
+.about i{
+  margin-right: 5rem !important;
+}
+  .contact h5{
+    margin-right: 10rem !important;
+
+  }
+
+
+      .dark-form{
+        margin-right: 7rem !important;
+      }
+      .conDel{
+        margin-right: 11rem !important;
+        font-size: 1rem !important;
+      }
+      .contact-details{
+        margin-right: 11rem !important;
+      }
+      #right-header{
+        margin-right: 13rem !important;
+
+      }
+        .footer-icons {
+            justify-content: center !important;
+
+        }
+
+        .footer-icons {
+
+           margin-right: 10.5rem !important;
+        }
+
+        .footer-icons i{
+          font-size:1rem !important;
+        }
+        .copy{
+          margin-right: 9.5rem !important;
+        }
+
+
+
+}
