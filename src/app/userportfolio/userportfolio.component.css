@@ -137,7 +137,7 @@
         font-size: 1rem !important;
       }
       .contact-details{
-        margin-right: 11rem !important;
+        margin-right: 13rem !important;
       }
       #right-header{
         margin-right: 13rem !important;
@@ -150,16 +150,18 @@
 
         .footer-icons {
 
-           margin-right: 10.5rem !important;
+           margin-right: 8.2rem !important;
         }
 
         .footer-icons i{
           font-size:1rem !important;
         }
         .copy{
-          margin-right: 9.5rem !important;
+          margin-right: 9rem !important;
         }
 
-
+      .project-container{
+        margin-right: 3.3rem !important;
+      }
 
 }

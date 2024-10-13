@@ -47,7 +47,7 @@ form textarea:focus{
 form input::placeholder{
   color: #8b8b8b;
 }
-.project1, .project2, .project3, .project4,
+.project1, .project2, .project3,
 .project5, .project6, .project7
 {
   border-bottom: 0.25rem solid var(--main-color);

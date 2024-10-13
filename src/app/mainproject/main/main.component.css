@@ -8,6 +8,8 @@
   right: 20%;
   font-weight: 800px;
   font-size: 1rem;
+
+
 }
 
 .top-main-content .name {
@@ -27,11 +29,11 @@
 @keyframes dropDown {
   0% {
     opacity: 0;
-    transform: translateY(-50px); /* Start above */
+    transform: translateY(-50px);
   }
   100% {
     opacity: 1;
-    transform: translateY(0); /* Move to its original position */
+    transform: translateY(0);
   }
 }
 /* Responsive Design */
@@ -57,6 +59,7 @@
     text-align: right;
     padding: 10px;
   }
+
   .top-main-content h1 {
     font-size: 1.8em;
   }
