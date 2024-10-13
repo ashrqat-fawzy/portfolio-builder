@@ -120,7 +120,7 @@
 
 /* for mobile screens */
 @media (max-width: 576px) {
-.about i{
+.about i, .label-bold{
   margin-right: 5rem !important;
 }
   .contact h5{
