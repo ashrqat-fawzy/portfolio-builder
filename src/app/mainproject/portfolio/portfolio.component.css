@@ -23,7 +23,7 @@
 
 .project img {
   width: 100% !important;
-  height: auto !important;
+  height: 11rem !important;
   max-width: 100%;
   max-height: 100%;
   margin-bottom: 1rem;
@@ -32,9 +32,8 @@
 .project img:hover {
   transform: scale(1.1);
 }
-/* .project #landing {
-  height: 13rem;
-} */
+
+
 .sec{
   margin-left: 0.1rem !important;
 }
@@ -48,7 +47,9 @@
   .project ul li a {
     font-size: 0.7rem !important;
   }
-
+  .project img{
+    height: 15rem !important;
+  }
   }
 .project ul li a:hover {
   color: #bac964 !important;
