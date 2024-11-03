@@ -5,8 +5,6 @@
   overflow: hidden;
 }
 
-
-
 .project {
   text-align: center;
   margin-top: 10rem;
@@ -39,15 +37,22 @@
 }
 .project ul li a {
   color: #8b8b8b;
+
 }
+@media (max-width: 576px) {
+  .project ul li a {
+    font-size: 0.7rem;
+  }
+
+  }
 .project ul li a:hover {
-  color: #bac964 !important;
+  color: #F28674 !important;
 }
 .project ul li a:visited {
   color: #8b8b8b;
 }
 .project #all {
-  background-color: #bac964;
+  background-color: #F28674;
   color: #fff;
   width: 4rem;
   height: 2rem;
@@ -93,14 +98,14 @@
 
 .project-tech {
   font-size: 1em;
-  color: #bac964;
+  color: #F28674;
   margin-bottom: 20px;
 }
 
 .learn-more {
-  border: 2px solid #bac964;
+  border: 2px solid #F28674;
   background: transparent;
-  color: #bac964;
+  color: #F28674;
   padding: 10px 20px;
   border-radius: 5px;
   text-transform: uppercase;
@@ -109,6 +114,6 @@
 }
 
 .learn-more:hover {
-  background-color: #bac964;
+  background-color: #F28674;
   color: #fff;
 }

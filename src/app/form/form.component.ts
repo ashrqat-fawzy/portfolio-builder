@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ReactiveFormsModule, FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { isNullOrUndefined } from 'node:util';
 
 @Component({
   selector: 'app-form',
@@ -22,20 +23,20 @@ export class FormComponent {
     this.contactForm = new FormGroup({
 
       email: new FormControl('', [
-        Validators.required,
+
         Validators.email
       ]),
       username: new FormControl('', [
-        Validators.required,
+
         Validators.minLength(5)
       ]),
       phone: new FormControl('', [
-        Validators.required,
+
         Validators.minLength(10)
       ]),
-      education: new FormControl(null, Validators.required),
+      education: new FormControl(null),
       resume: new FormControl(null),
-      img: new FormControl(null, Validators.required),
+      img: new FormControl(null),
       linkedin: new FormControl(null),
       github: new FormControl(null),
       facebook: new FormControl(null),
@@ -62,59 +63,59 @@ export class FormComponent {
       trackSkill4:new FormControl(null),
 
       // for projects
-      projectImg1:new FormControl(null,Validators.required),
+      projectImg1:new FormControl(null),
       projectTitle1:new FormControl(null),
       projectTool1:new FormControl(null),
 
-      projectImg2:new FormControl(null,Validators.required),
+      projectImg2:new FormControl(null),
       projectTitle2:new FormControl(null),
       projectTool2:new FormControl(null),
 
-      projectImg3:new FormControl(null,Validators.required),
+      projectImg3:new FormControl(null),
       projectTitle3:new FormControl(null),
       projectTool3:new FormControl(null),
 
-      projectImg4:new FormControl(null,Validators.required),
+      projectImg4:new FormControl(null),
       projectTitle4:new FormControl(null),
       projectTool4:new FormControl(null),
 
-      projectImg5:new FormControl(null,Validators.required),
+      projectImg5:new FormControl(null),
       projectTitle5:new FormControl(null),
       projectTool5:new FormControl(null),
 
-      projectImg6:new FormControl(null,Validators.required),
+      projectImg6:new FormControl(null),
       projectTitle6:new FormControl(null),
       projectTool6:new FormControl(null),
 
-      projectImg7:new FormControl(null,Validators.required),
+      projectImg7:new FormControl(null),
       projectTitle7:new FormControl(null),
       projectTool7:new FormControl(null),
 
-      projectImg8:new FormControl(null,Validators.required),
+      projectImg8:new FormControl(null),
       projectTitle8:new FormControl(null),
       projectTool8:new FormControl(null),
 
       // about Blogs
       blog1: new FormControl(null),
-      blog1img: new FormControl(null,Validators.required),
+      blog1img: new FormControl(null),
       blog1title:new FormControl(null),
       blog1description:new FormControl(null),
       blog1date: new FormControl(null),
 
       blog2: new FormControl(null),
-      blog2img: new FormControl(null,Validators.required),
+      blog2img: new FormControl(null),
       blog2title:new FormControl(null),
       blog2description:new FormControl(null),
       blog2date: new FormControl(null),
 
       blog3: new FormControl(null),
-      blog3img: new FormControl(null,Validators.required),
+      blog3img: new FormControl(null),
       blog3title:new FormControl(null),
       blog3description:new FormControl(null),
       blog3date: new FormControl(null),
 
       blog4: new FormControl(null),
-      blog4img: new FormControl(null,Validators.required),
+      blog4img: new FormControl(null),
       blog4title:new FormControl(null),
       blog4description:new FormControl(null),
       blog4date: new FormControl(null),
@@ -448,7 +449,7 @@ onImageUploadProject8(event: any) {
           phone: this.contactForm.value.phone,
           education: this.contactForm.value.education,
           resume: this.contactForm.value.resume,
-          img: this.contactForm.value.img, // Pass the image data as base64 string
+          img: this.contactForm.value.img, 
           linkedin: this.contactForm.value.linkedin,
           github: this.contactForm.value.github,
           facebook: this.contactForm.value.facebook,
@@ -537,8 +538,5 @@ onImageUploadProject8(event: any) {
     }
   }
 
-  // for btn click
-  onButtonClick() {
-    this.isClicked = true;
-  }
+
 }

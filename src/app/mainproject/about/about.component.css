@@ -9,6 +9,13 @@
   text-align: center;
 }
 
+@media (max-width: 576px) {
+  #aboutMe{
+    margin-left: 2.5rem !important;
+  }
+
+  }
+
 /* about section */
 .icons-row {
   display: flex;
@@ -31,13 +38,23 @@
   transform: scale(1.2);
 }
 
-.card-icon-1 i {
+.card-icon-1 i,img {
   font-size: 2rem;
-  color: #fff;
+  /* color: #3a6ea5; */
+  color: #F28674 !important;
   margin-bottom: 1.5rem;
   padding: 1rem;
-  background-color: #bac964;
-  clip-path: polygon(25% 0, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0 50%);
+  /* background-color: #bac964; */
+  /* clip-path: polygon(25% 0, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0 50%); */
+}
+.circle-bg {
+  width: 3rem;
+  height: 3rem;
+  background-color: #F28674;
+  border-radius: 50%;
+  padding: 10px;
+  box-sizing: border-box;
+  display: inline-block;
 }
 
 .card-icon-1 .label-bold {
@@ -83,7 +100,7 @@
 
 #sec-about .btns a {
   text-decoration: none;
- 
+
 }
 
 #sec-about .btns button {
@@ -93,7 +110,8 @@
 }
 
 #sec-about #hire {
-  background-color: #bac964;
+  /* background-color: #bac964; */
+  background-color: #F28674;
 }
 
 #sec-about #download {
@@ -110,7 +128,7 @@
 
 .que {
   font-weight: bold;
-  color: #bac964;
+  color: #F28674;
 }
 
 .progress-container {
@@ -126,7 +144,7 @@
 }
 
 .progress-container .progress-bar {
-  background-color: #bac964;
+  background-color: #F28674;
   font-weight: bold;
   font-size: 1rem;
 }

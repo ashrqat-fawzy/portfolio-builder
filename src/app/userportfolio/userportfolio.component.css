@@ -9,9 +9,21 @@
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
   text-align: center;
   margin: auto;
+  /* background-color: transparent !important;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  right: 2rem !important; */
+
+}
+.circle-bg {
+  width: 3rem;
+  height: 3rem;
+  background-color: #F28674;
+  border-radius: 50%;
+  padding: 10px;
+  box-sizing: border-box;
+  display: inline-block;
 }
 
 .top-main-img img{
@@ -32,16 +44,16 @@
   margin: 0.5rem;
 }
 
-.project #landing {
-  max-width: 100% !important;
-  height: 9.5rem !important;
-}
+
 
 #projects img{
   width: 100% !important;
-  height: 10rem;
+  height: 10rem !important;
 }
-
+#projects #landing{
+  width: 100% !important;
+  height: 10rem !important;
+}
 
 #hire, #download{
   padding: 0.5rem;
@@ -118,3 +130,50 @@
 }
 
 
+/* for mobile screens */
+@media (max-width: 576px) {
+.about i, .label-bold{
+  margin-right: 5rem !important;
+}
+  .contact h5{
+    margin-right: 10rem !important;
+
+  }
+
+
+      .dark-form{
+        margin-right: 7rem !important;
+      }
+      .conDel{
+        margin-right: 11rem !important;
+        font-size: 1rem !important;
+      }
+      .contact-details{
+        margin-right: 13rem !important;
+      }
+      #right-header{
+        margin-right: 13rem !important;
+
+      }
+        .footer-icons {
+            justify-content: center !important;
+
+        }
+
+        .footer-icons {
+
+           margin-right: 8.2rem !important;
+        }
+
+        .footer-icons i{
+          font-size:1rem !important;
+        }
+        .copy{
+          margin-right: 9rem !important;
+        }
+
+      .project-container{
+        margin-right: 3.3rem !important;
+      }
+
+}

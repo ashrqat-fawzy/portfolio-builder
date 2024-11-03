@@ -17,7 +17,7 @@ footer .footer-icons {
 }
 footer .footer-icons i {
   margin-left: 2rem;
-  color: #bac964;
+  color: #F28674;
   font-size: 2rem;
   margin-bottom: 1.5rem;
   padding: 1rem;
@@ -28,7 +28,7 @@ footer .footer-icons i {
 /* style for link transfer */
 .btn-link {
   display: inline-block;
-  background-color: #bac964;
+  background-color: #F28674;
   color: white;
   padding: 10px 20px;
   text-decoration: none;
@@ -41,6 +41,6 @@ footer .footer-icons i {
 }
 
 .btn-link:hover {
-  background-color: #a9b854;
+  background-color: #F28674;
   color: #fff;
 }

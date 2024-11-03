@@ -9,7 +9,7 @@ body {
 }
 
 .navbar-toggler {
-  background-color: #bac964;
+  background-color: #F28674;
   border: none;
   margin-right: 85%;
   margin-left: 2rem;
@@ -62,7 +62,7 @@ body {
 }
 
 .navbar-scrolled ul li a:hover {
-  color: #bac964 !important;
+  color: #F28674 !important;
 }
 @media (max-width: 576px) {
 .navbar{

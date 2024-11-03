@@ -47,7 +47,7 @@ form textarea:focus{
 form input::placeholder{
   color: #8b8b8b;
 }
-.project1, .project2, .project3, .project4,
+.project1, .project2, .project3,
 .project5, .project6, .project7
 {
   border-bottom: 0.25rem solid var(--main-color);
@@ -84,3 +84,36 @@ form button{
 }
 
 
+/* Mobile Styles */
+@media (max-width: 576px) {
+  h1 {
+    margin-left: 0;
+  }
+
+  form {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .form-group {
+    margin-bottom: 1rem;
+  }
+
+
+  form input,
+  form textarea {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+
+
+  .project1,
+  .project2,
+  .project3,
+  .project4,
+  .project5,
+  .project6,
+  .project7 {
+    padding: 1rem;
+  }
+}

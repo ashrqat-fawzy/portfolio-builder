@@ -1,6 +1,8 @@
 .top-main-img {
   position: relative;
+
 }
+
 
 .top-main-content {
   position: absolute;
@@ -8,6 +10,7 @@
   right: 20%;
   font-weight: 800px;
   font-size: 1rem;
+
 }
 
 .top-main-content .name {
